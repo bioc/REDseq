@@ -23,6 +23,10 @@ function(dict0, BSgenomeName, outfile="")
  		cat(">>> Finding all hits in chromosome", seqname, "...\n")
  		for (i in seq_len(length(dict0))) {
  			patternID <- names(dict0)[i]
+			if (length(patternID)<1)
+			{
+				patternID=paste("pattern", i,sep="")
+			}
  			pattern <- dict0[[i]]
  			plus_matches <- matchPattern(pattern, subject, fixed=FALSE)
  			names(plus_matches) <- rep.int(patternID, length(plus_matches))
