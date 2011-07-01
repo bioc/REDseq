@@ -1,11 +1,11 @@
 Package: REDseq
 Type: Package
 Title: Analysis of high-throughput sequencing data processed by restriction enzyme digestion
-Version: 0.99.3
-Date: 2011-06-07
+Version: 0.99.5
+Date: 2011-07-01
 Author: Lihua Julie Zhu
 Maintainer: Lihua Julie Zhu <julie.zhu@umassmed.edu>
-Depends: R (>= 2.12.1), BSgenome.Celegans.UCSC.ce2, multtest, Biostrings, BSgenome,ChIPpeakAnno
+Depends: R (>= 2.14.1), BSgenome.Celegans.UCSC.ce2, multtest, Biostrings, BSgenome,ChIPpeakAnno
 Imports: AnnotationDbi, Biostrings, ChIPpeakAnno, graphics, IRanges,multtest, stats, utils
 biocViews: Sequencing, SequenceMatching, Preprocessing
 Description: The package includes functions to build restriction enzyme cut site (RECS) map, distribute mapped sequences on the map with five different approaches, find enriched/depleted RECSs for a sample, and identify differentially enriched/depleted RECSs between samples.

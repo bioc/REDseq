@@ -29,14 +29,14 @@ Whether apply multiple hypothesis testing adjustment, TURE or FALSE
 Multiple testing procedures, for details, see mt.rawp2adjp in multtest package
 }
   \item{maxP}{The maximum p-value to be considered to be significant}
-  \item{minCount}{The minimum count for a RE site to be included}
+  \item{minCount}{For a RE site to be included, the tag count from at least one of the experimental condictions >= minimumCount}
 }
 \value{
 \item{p.value}{the p-value of the test}
  \item{*.count}{weight/count from the input column col.count1 and col.count2}
 \item{*.total}{total weight/count from input column col.count1 and col.count2}
  \item{REid}{the id of the restriction enzyme from the input}
- \item{odds.ratio}{an estimate of the odds ratio}
+ \item{odds.ratio}{an estimate of the odds ratio for 2nd experimental condition vs. 1st experimental condition}
  \item{*.adjusted.p.value}{applicable if multiAdj=TRUE, adjusted p.value using the method * specified in multiAdjMethod}
 }
 \author{

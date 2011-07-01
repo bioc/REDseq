@@ -18,7 +18,7 @@ function(REsummary,col.count1=2, col.count2=3, multiAdj = TRUE, multiAdjMethod="
 	unique.pair = unique(cbind(as.numeric(REsummary[,col.count1]), as.numeric(REsummary[,col.count2])))
 	colnames(unique.pair) = c(colnames(REsummary)[col.count1],colnames(REsummary)[col.count2])
 	pvalue =do.call(rbind,lapply(1:dim(unique.pair)[1], function(i) {
-		temp = matrix(c(unique.pair[i,1], unique.pair[i,2], total1 - unique.pair[i,1], total2-unique.pair[i,2]),
+		temp = matrix(c(unique.pair[i,2], unique.pair[i,1], total2 - unique.pair[i,2], total1-unique.pair[i,1]),
       	 		nrow = 2,  dimnames =  list(c(group1, group2),  c("cut", "not cut")))
 		r1 = fisher.test(temp)
 		c(unique.pair[i,],r1$p.value, r1$est)
@@ -37,6 +37,7 @@ function(REsummary,col.count1=2, col.count2=3, multiAdj = TRUE, multiAdjMethod="
         			colnames(adjp)[1] = "p.value"
         			colnames(adjp)[2] = paste(multiAdjMethod, "adjusted.p.value", sep = ".")
         			temp = merge(REsummary, adjp, all.x = TRUE)
+				temp[is.na(temp[, dim(temp)[2]]),dim(temp)[2]] = 1
 				temp[temp[,dim(temp)[2]] <=maxP,]
 	}
 	else
