@@ -19,7 +19,8 @@ function(REpatternFilePath,format="fasta", BSgenomeName, outfile)
 		}
 		if (file.exists(outfile))
 		{
-			stop("outfile specified as ", outfile, " already exists! Please rename the outfile!")
+			outfile = paste("REDseq_buildREmap", outfile,sep="_")
+			#stop("outfile specified as ", outfile, " already exists! Please rename the outfile!")
 		}
 		dict = read.DNAStringSet(REpatternFilePath, format, use.names=TRUE) 
 		searchPattern(dict, BSgenomeName=BSgenomeName,outfile=outfile)
