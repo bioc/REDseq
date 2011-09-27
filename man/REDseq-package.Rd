@@ -40,7 +40,7 @@ buildREmap, assignSeq2REsit, plotCutDistribution, distanceHistSeq2RE, summarizeB
 	library(ChIPpeakAnno)
 	REpatternFilePath = system.file("extdata", "examplePattern.fa", package="REDseq")
 	library(BSgenome.Celegans.UCSC.ce2)
-	buildREmap( REpatternFilePath, BSgenomeName=Celegans, outfile="example.REmap")
+	buildREmap( REpatternFilePath, BSgenomeName=Celegans, outfile=tempfile())
 	library(REDseq)
 	data(example.REDseq)
 	data(example.map)

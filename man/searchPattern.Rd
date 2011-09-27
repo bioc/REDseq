@@ -42,7 +42,7 @@ buildREmap
 	patternFile = system.file("extdata", "examplePattern.fa", package="REDseq")
 	example.dict0 <- read.DNAStringSet(patternFile, "fasta")
 	library(BSgenome.Celegans.UCSC.ce2)
-	REDseq:::searchPattern(dict0 = example.dict0, BSgenomeName=Celegans, outfile="example.REmap")
+	REDseq:::searchPattern(dict0 = example.dict0, BSgenomeName=Celegans, outfile=tempfile())
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

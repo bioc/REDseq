@@ -37,7 +37,7 @@ Lihua Julie Zhu
 	library(ChIPpeakAnno)
 	REpatternFilePath = system.file("extdata", "examplePattern.fa", package="REDseq")
 	library(BSgenome.Celegans.UCSC.ce2)
-	buildREmap( REpatternFilePath, BSgenomeName=Celegans, outfile="example.REmap")
+	buildREmap( REpatternFilePath, BSgenomeName=Celegans, outfile=tempfile())
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
