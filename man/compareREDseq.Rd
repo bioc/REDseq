@@ -48,6 +48,7 @@ Lihua Julie Zhu
 binom.test.REDseq
 }
 \examples{
+library(REDseq)
 x= cbind(c("RE1", "RE2", "RE3", "RE4"), c(10,1,100, 0),c(5,5,50, 40))
 colnames(x) = c("REid", "control", "treated")
 compareREDseq(x)

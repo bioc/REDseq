@@ -53,6 +53,7 @@ Lihua Julie Zhu
 assignSeq2REsite, distanceHistSeq2RE
 }
 \examples{
+	library(REDseq)
 	data(example.assignedREDseq)
 	data(example.map)
 	plotCutDistribution(example.assignedREDseq,example.map,

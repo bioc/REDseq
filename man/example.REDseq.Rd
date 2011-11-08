@@ -13,6 +13,7 @@ an example RED sequencing dataset as a RangedData
 Formal class 'RangedData' [package "IRanges"]
   }
 \examples{
+library(REDseq)
 data(example.REDseq)
 ## maybe str(example.REDseq) ; plot(example.REDseq) ...
 }

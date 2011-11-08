@@ -40,6 +40,7 @@ Lihua Julie Zhu
 assignSeq2REsite, distanceHistSeq2RE
 }
 \examples{
+library(REDseq)
 data(example.assignedREDseq)
 distanceHistSeq2RE(example.assignedREDseq,ylim=c(0,20))
 }

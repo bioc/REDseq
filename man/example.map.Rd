@@ -13,6 +13,7 @@ an example REmap dataset as RangedData generated from buildREmap
 Formal class 'RangedData' [package "IRanges"]
 }
 \examples{
+library(REDseq)
 data(example.map)
 ## maybe str(example.map) ; plot(example.map) ...
 }

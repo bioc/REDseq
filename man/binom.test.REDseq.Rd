@@ -46,6 +46,7 @@ Lihua Julie Zhu
 compareREDseq
 }
 \examples{
+	library(REDseq)
 	REsummary = cbind(c("RE1", "RE2", "RE3"), c(10,1,100))
 	colnames(REsummary) = c("REid", "control")
 	binom.test.REDseq(REsummary)

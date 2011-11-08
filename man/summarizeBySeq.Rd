@@ -30,6 +30,7 @@ Lihua Julie Zhu
 summarizeByRE, assignSeq2REsite
 }
 \examples{
+	library(REDseq)
 	data(example.assignedREDseq)
 	summarizeBySeq(example.assignedREDseq, by="Weight")
 	summarizeBySeq(example.assignedREDseq,by="SEQid")

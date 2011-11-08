@@ -48,6 +48,7 @@ List of 3\cr
   ..$ total.count: total number of seeds that are associated with this SEQid \cr
   }
 \examples{
+library(REDseq)
 data(example.assignedREDseq)
 ## maybe str(example.assignedREDseq) ; plot(example.assignedREDseq) ...
 }

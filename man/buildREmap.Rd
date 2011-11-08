@@ -34,7 +34,7 @@ Lihua Julie Zhu
 
 
 \examples{
-	library(ChIPpeakAnno)
+	library(REDseq)
 	REpatternFilePath = system.file("extdata", "examplePattern.fa", package="REDseq")
 	library(BSgenome.Celegans.UCSC.ce2)
 	buildREmap( REpatternFilePath, BSgenomeName=Celegans, outfile=tempfile())
