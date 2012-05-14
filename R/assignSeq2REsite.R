@@ -57,7 +57,7 @@ function(input.RD, REmap.RD, cut.offset=1, seq.length=36, allowed.offset=5, min.
 				names=thisMap$REid)
 				tree = IntervalTree(Map.IR)
             			matches = findOverlaps(tree, query = Input.IR, maxgap = max.FragmentLength, select ="all")
-                		matchmatrix = matchMatrix(matches)
+                		matchmatrix = as.matrix(matches)
                 		qname = Input.IR[matchmatrix[, 1]]
                 		tname = Map.IR[matchmatrix[, 2]]
 				Distance = start(qname) - start(tname)
