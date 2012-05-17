@@ -22,7 +22,7 @@ function(REpatternFilePath,format="fasta", BSgenomeName, outfile)
 			outfile = paste("REDseq_buildREmap", outfile,sep="_")
 			#stop("outfile specified as ", outfile, " already exists! Please rename the outfile!")
 		}
-		dict = read.DNAStringSet(REpatternFilePath, format, use.names=TRUE) 
+		dict = readDNAStringSet(REpatternFilePath, format, use.names=TRUE) 
 		searchPattern(dict, BSgenomeName=BSgenomeName,outfile=outfile)
 		hits <- read.table(outfile, sep="\t", header=TRUE)
 		REmap <- BED2RangedData(hits)
