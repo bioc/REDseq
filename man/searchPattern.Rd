@@ -40,7 +40,7 @@ buildREmap
 \examples{
 	library(REDseq)
 	patternFile = system.file("extdata", "examplePattern.fa", package="REDseq")
-	example.dict0 <- read.DNAStringSet(patternFile, "fasta")
+	example.dict0 <- readDNAStringSet(patternFile, "fasta")
 	library(BSgenome.Celegans.UCSC.ce2)
 	REDseq:::searchPattern(dict0 = example.dict0, BSgenomeName=Celegans, outfile=tempfile())
 }
