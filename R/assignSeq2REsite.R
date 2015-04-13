@@ -55,8 +55,7 @@ function(input.RD, REmap.RD, cut.offset=1, seq.length=36, allowed.offset=5, min.
 				colnames(id.strand) = c("SEQid", "strand")
 				Map.IR = IRanges(start=thisMap$REstart,end=thisMap$REend,
 				names=thisMap$REid)
-				tree = IntervalTree(Map.IR)
-            			matches = findOverlaps(tree, query = Input.IR, maxgap = max.FragmentLength, select ="all")
+            			matches = findOverlaps(Input.IR, Map.IR, maxgap = max.FragmentLength, select ="all")
                 		matchmatrix = as.matrix(matches)
                 		qname = Input.IR[matchmatrix[, 1]]
                 		tname = Map.IR[matchmatrix[, 2]]
