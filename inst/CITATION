@@ -1,0 +1,14 @@
+citHeader("Please cite the paper below for the REDseq package.")
+
+citEntry(entry="Article",
+	title="Unbiased chromatin accessibility profiling by RED-seq uncovers unique features of nucleosome variants in vivo",
+	author="Chen PB, Zhu LJ, Hainer SJ, McCannell KN, Fazzio TG",
+	journal="BMC Genomics",
+	volume=15,
+	year=2014,
+	number=1104,
+	url="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4378318/",
+	PubMedID="PMC4378318",
+	abstract="Differential accessibility of DNA to nuclear proteins underlies the regulation of numerous cellular processes. Although DNA accessibility is primarily determined by the presence or absence of nucleosomes, differences in nucleosome composition or dynamics may also regulate accessibility. Methods for mapping nucleosome positions and occupancies genome-wide (MNase-seq) have uncovered the nucleosome landscapes of many different cell types and organisms. Conversely, methods specialized for the detection of large nucleosome-free regions of chromatin (DNase-seq, FAIRE-seq) have uncovered numerous gene regulatory elements. However, these methods are less successful in measuring the accessibility of DNA sequences within nucelosome arrays. Here we probe the genome-wide accessibility of multiple cell types in an unbiased manner using restriction endonuclease digestion of chromatin coupled to deep sequencing (RED-seq). Using this method, we identified differences in chromatin accessibility between populations of cells, not only in nucleosome-depleted regions of the genome (e.g., enhancers and promoters), but also within the majority of the genome that is packaged into nucleosome arrays. Furthermore, we identified both large differences in chromatin accessibility in distinct cell lineages and subtle but significant changes during differentiation of mouse embryonic stem cells (ESCs). Most significantly, using RED-seq, we identified differences in accessibility among nucleosomes harboring well-studied histone variants, and show that these differences depend on factors required for their deposition. Using an unbiased method to probe chromatin accessibility genome-wide, we uncover unique features of chromatin structure that are not observed using more widely-utilized methods. We demonstrate that different types of nucleosomes within mammalian cells exhibit different degrees of accessibility. These findings provide significant insight into the regulation of DNA accessibility",
+	textVersion="Chen PB, Zhu LJ, Hainer SJ, McCannell KN, Fazzio TG. Unbiased chromatin accessibility profiling by RED-seq uncovers unique features of nucleosome variants in vivo. BMC Genomics. 2014; 15:1104"
+)

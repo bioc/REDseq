@@ -138,7 +138,7 @@ compareREDseq(x)
 \item Zhu, L.J., et al., ChIPpeakAnno: a Bioconductor package to annotate ChIP-seq and ChIP-chip data. BMC Bioinformatics, 2010. 11: p. 237.
 \item Pages, H., BSgenome package. http://bioconductor.org/packages/2.8/bioc/vignettes/
 BSgenome/inst/doc/GenomeSearching.pdf
-\item Zhu, L.J., et al., REDseq: A Bioconductor package for Analyzing High Throughput Sequencing Data from Restriction Enzyme Digestion. (In preparation)
+\item Chen PB, Zhu LJ, Hainer SJ, McCannell KN, Fazzio TG. Unbiased chromatin accessibility profiling by RED-seq uncovers unique features of nucleosome variants in vivo. BMC Genomics. 2014; 15:1104.
 \end{enumerate}
 \section{Session Info}
 <<>>=
