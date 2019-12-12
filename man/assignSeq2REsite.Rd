@@ -5,7 +5,7 @@
 Assign mapped sequence tags to corresponding restriction enzyme (RE) cut sites
 }
 \description{
-Given the sequence tags aligned to a genome as a RangedData, and a map built using the buildREmap function, assignSeq2REsite first identifies RE sites that have mapped sequence tags around the cut position taking consideration of user-defined offset, sequence length and strand in the aligned sequences. These RE sites are used as seeds for assigning the remaining tags depending on which of five strategies the users select for partitioning sequences associated with multiple RE sites, i.e., unique, average,estimate, best and random.
+Given the sequence tags aligned to a genome as a GRanges, and a map built using the buildREmap function, assignSeq2REsite first identifies RE sites that have mapped sequence tags around the cut position taking consideration of user-defined offset, sequence length and strand in the aligned sequences. These RE sites are used as seeds for assigning the remaining tags depending on which of five strategies the users select for partitioning sequences associated with multiple RE sites, i.e., unique, average,estimate, best and random.
 }
 \usage{
 assignSeq2REsite(input.RD, REmap.RD, cut.offset = 1, seq.length = 36, 
@@ -15,10 +15,10 @@ partitionMultipleRE = c("unique", "average", "estimate","best", "random"))
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{input.RD}{
-RangedData as mapped sequences: see example below
+GRanges as mapped sequences: see example below
 }
   \item{REmap.RD}{
-RangedData as restriction enzyme (RE) cut site map: see example below
+GRanges as restriction enzyme (RE) cut site map: see example below
 }
   \item{cut.offset}{
 The cut offset from the start of the RE recognition sequence: index is 0 based, i.e.,1 means the RE cuts at position 2. 

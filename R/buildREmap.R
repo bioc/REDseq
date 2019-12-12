@@ -24,8 +24,7 @@ function(REpatternFilePath,format="fasta", BSgenomeName, outfile)
 		}
 		dict = readDNAStringSet(REpatternFilePath, format, use.names=TRUE) 
 		searchPattern(dict, BSgenomeName=BSgenomeName,outfile=outfile)
-		hits <- read.table(outfile, sep="\t", header=TRUE)
-		REmap <- BED2RangedData(hits)
+		REmap <- toGRanges(outfile, format="BED", header=TRUE, sep ="\t")
 		file.remove(outfile)
 		REmap	
 }

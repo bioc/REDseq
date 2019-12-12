@@ -5,12 +5,12 @@
 an example REmap dataset
 }
 \description{
-an example REmap dataset as RangedData generated from buildREmap
+an example REmap dataset as GRanges generated from buildREmap
 }
 \usage{data(example.map)}
 \format{
   The format is:
-Formal class 'RangedData' [package "IRanges"]
+Formal class 'GRanges' [package "GenomicRanges"]
 }
 \examples{
 library(REDseq)

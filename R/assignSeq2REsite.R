@@ -6,30 +6,30 @@ function(input.RD, REmap.RD, cut.offset=1, seq.length=36, allowed.offset=5, min.
 		if (missing(input.RD)) {
         stop("Missing required argument input.RD!")
     }
-    if (class(input.RD) != "RangedData") {
-        stop("No valid input.RD passed in. It needs to be RangedData object")
+    if (class(input.RD) != "GRanges") {
+        stop("No valid input.RD passed in. It needs to be GRanges object")
     }
     if (missing(REmap.RD)) {
         stop("Missing requirement argument REmap.RD!")
 		}
-    if (class(REmap.RD) != "RangedData") {
-        stop("No valid REmap.RD passed in. It needs to be RangedData")
+    if (class(REmap.RD) != "GRanges") {
+        stop("No valid REmap.RD passed in. It needs to be GRanges")
     }		
-	allChr.map = unique(as.character(space(REmap.RD)))
-	allChr.input = unique(as.character(space(input.RD)))
+	allChr.map = unique(as.character(seqnames(REmap.RD)))
+	allChr.input = unique(as.character(seqnames(input.RD)))
 	cat(date(), "Prepare map data ...\n");
-	REmap.RD = REmap.RD[as.character(space(REmap.RD)) %in% allChr.input,]
+	REmap.RD = REmap.RD[as.character(seqnames(REmap.RD)) %in% allChr.input,]
 	r1 = do.call(rbind,lapply(allChr.input,function(chr)
 	{
                	   if (chr %in% allChr.map) {
 			cat(date(), "Align to chromosome ", chr, " ...\n");
-			thisInput = input.RD[as.character(space(input.RD)) == chr,]
-			thisMap = REmap.RD[as.character(space(REmap.RD))== chr,]
+			thisInput = input.RD[as.character(seqnames(input.RD)) == chr,]
+			thisMap = REmap.RD[as.character(seqnames(REmap.RD))== chr,]
 			Input.IR = IRanges(start=start(thisInput),end=end(thisInput),
-			names=rownames(thisInput))
+			  names = names(thisInput))
 			Map.IR = IRanges(start=start(thisMap),end=end(thisMap),
-			names=rownames(thisMap))
-			this.strand = thisInput$strand
+			   names = names(thisMap))
+			this.strand = as.character(strand(thisInput))
 			rm(thisInput)
 			rm(thisMap)
  	                nearestRE = Map.IR[nearest(Input.IR, Map.IR)]	

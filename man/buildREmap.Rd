@@ -26,7 +26,7 @@ temporary output file for writing the matched chromosome location to
 }
 }
 \value{
-Output REmap as a RangedData
+Output REmap as a GRanges
 }
 \author{
 Lihua Julie Zhu
