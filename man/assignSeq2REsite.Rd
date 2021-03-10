@@ -6,6 +6,7 @@ Assign mapped sequence tags to corresponding restriction enzyme (RE) cut sites
 }
 \description{
 Given the sequence tags aligned to a genome as a GRanges, and a map built using the buildREmap function, assignSeq2REsite first identifies RE sites that have mapped sequence tags around the cut position taking consideration of user-defined offset, sequence length and strand in the aligned sequences. These RE sites are used as seeds for assigning the remaining tags depending on which of five strategies the users select for partitioning sequences associated with multiple RE sites, i.e., unique, average,estimate, best and random.
+Please note that the default setting is for single-end sequencing data. For paired-end sequencing data, please create inputS.RD and inputE.RD from input.RD first with start(input.RD) and end(input.RD), where inputS.RD contains the start of the input.RD and inputE.RD contains the end of the input.RD. Then call assignSeq2REsite twice with inputS.RD and inputE.RD respectively. Please set min.FragmentLength = 0, max.FragmentLength = 1, seq.length = 1 with both calls.
 }
 \usage{
 assignSeq2REsite(input.RD, REmap.RD, cut.offset = 1, seq.length = 36, 

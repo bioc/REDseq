@@ -67,7 +67,7 @@ function(input.RD, REmap.RD, cut.offset=1, seq.length=36, allowed.offset=5, min.
                 }
      }))
 	cat(date(), "Start filtering ... \n");
-	r.passed = r2[(r2$Distance < 0 & abs(r2$Distance) <= max.FragmentLength  & abs(r2$Distance) >= min.FragmentLength) |(r2$Distance > 0 & abs(r2$Distance) <= (max.FragmentLength -seq.length) & abs(r2$Distance) >= (min.FragmentLength -seq.length)),]
+	r.passed = r2[(r2$Distance <= 0 & abs(r2$Distance) <= max.FragmentLength  & abs(r2$Distance) >= min.FragmentLength) |(r2$Distance >= 0 & abs(r2$Distance) <= (max.FragmentLength -seq.length) & abs(r2$Distance) >= (min.FragmentLength -seq.length)),]
 	r.notpassed = r2[!r2$SEQid %in% r.passed$SEQid,]
 	
 	seqID.count = as.data.frame(table(r.passed$SEQid))

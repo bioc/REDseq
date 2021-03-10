@@ -65,6 +65,9 @@ Given a mapped sequence tags as a GRanges and REmap as a Granges, \Rfunction{ass
 	max.FragmentLength = 300, partitionMultipleRE = "estimate")
 	head(r.estimate$passed.filter)
 @
+
+The above examples are for single-end sequencing data. For paired-end sequencing data, please create inputS.RD and inputE.RD from input.RD first with start(input.RD) and end(input.RD), where inputS.RD contains the start of the input.RD and inputE.RD contains the end of the input.RD. Then call assignSeq2REsite twice with inputS.RD and inputE.RD respectively. Please set min.FragmentLength = 0, max.FragmentLength = 1, seq.length = 1 with both calls.
+
 \end{scriptsize}
 
 \subsection{Task 3:  Visualize the distribution of cut frequency in selected genomic regions and the distance distribution of sequence tags to corresponding RE sites }
